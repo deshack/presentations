@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Come funziona un tema WordPress?</title>
+
+    <meta name="description" content="Presentazione di accompagnamento al quarto incontro del WordPress Meetup Verona." />
+    <meta name="author" content="Mattia Migliorini" />
+    <link href="css/classic-slides.css" rel="stylesheet" />
+
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-transition-duration="1000">
+
+    <div class="step" id="initial-screenshot">
+      <img src="img/wordpress.png"
+           alt="Screenshot of the original post on openlife.cc"
+           style="max-width: 100%; max-height: 100%; position: relative;" />
+    </div>
+
+    <div class="step title" data-rel-x="1500">
+      <h1><big>Come funziona un tema?</big></h1>
+      <div class="notes">Autore: Mattia Migliorini</div>
+    </div>
+
+    <div class="step title" data-rel-x="800" data-rel-y="800" data-rotate="60">
+        <img src="img/alt.png" alt="Alt!" style="max-width: 100%; max-height: 100%; position: relative;">
+    </div>
+
+    <div class="step title" data-rel-x="300" data-rel-y="1100" data-rotate="90">
+        <h1><big>Cos'&egrave; un tema?</big></h1>
+    </div>
+
+    <div class="step" data-rel-x="-300" data-rel-y="1100" data-rotate="120">
+      <h2 style="text-align: center;">Presentazione</h2>
+      <p style="text-align:center;">vs</p>
+      <h2 style="text-align: center;">Funzionalit&agrave;</h2>
+    </div>
+
+
+    <div class="step slide" data-rel-x="-300" data-rel-y="1100" data-rotate="90">
+      <h2>Presentazione</h2>
+      <p style="margin-top:150px">Tutto ci&ograve; che &egrave; legato alla sola <em>presentazione</em> dei contenuti</p>
+    </div>
+
+    <div class="step slide" data-rel-x="0" data-rel-y="1300" data-rotate="90">
+      <h2>Funzionalit&agrave;: esempi</h2>
+      <ul>
+        <li>Supporto analytics e tracking</li>
+        <li>Opzioni SEO</li>
+        <li>Bottoni di condivisione</li>
+        <li>Form di contatto</li>
+        <li>Metabox (non funzionali al design)</li>
+        <li>Caching di risorse</li>
+        <li>Dashboard widget nell'admin area</li>
+      </ul>
+      <p class="bottom"><small>Fonte: <a href="https://make.wordpress.org/themes/handbook/review/required/explanations-and-examples/#plugin-territory">make.wordpress.org</a></small></p>
+    </div>
+
+    <div class="step" data-rel-x="300" data-rel-y="1100" data-rotate="60">
+      <h2>Quindi, come funziona un tema?</h2>
+    </div>
+
+    <div class="step slide" data-rel-x="800" data-rel-y="800" data-rotate="30">
+      <h2>Elementi essenziali</h2>
+      <ul style="margin-top:100px">
+        <li><code>style.css</code></li>
+        <li><code>functions.php</code></li>
+        <li>un template file (generalmente <code>index.php</code>)</li>
+      </ul>
+    </div>
+
+    <div class="step slide source hide" data-rel-x="1100" data-rel-y="300" data-rotate="0" style="z-index:1000">
+      <pre>
+/*
+Theme Name:
+Theme URI:
+Author:
+Author URI:
+Description:
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:999">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI:
+Author:
+Author URI:
+Description:
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:998">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author:
+Author URI:
+Description:
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:997">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI:
+Description:
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:996">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description:
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:995">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description: Melany is a simple, &hellip;
+Version:
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:994">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description: Melany is a simple, &hellip;
+Version: 1.1.2
+License:
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:993">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description: Melany is a simple, &hellip;
+Version: 1.1.2
+License: GPLv3
+License URI:
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:992">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description: Melany is a simple, &hellip;
+Version: 1.1.2
+License: GPLv3
+License URI: http://www.gnu.org/&hellip;
+Tags:
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source hide" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:991">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description: Melany is a simple, &hellip;
+Version: 1.1.2
+License: GPLv3
+License URI: http://www.gnu.org/&hellip;
+Tags: two-columns, &hellip;
+Text Domain:
+*/
+      </pre>
+    </div>
+    <div class="step slide source" data-rel-x="0" data-rel-y="0" data-rotate="0" style="z-index:990">
+      <pre>
+/*
+Theme Name: Melany
+Theme URI: https://github.com/deshack/melany
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+Description: Melany is a simple, &hellip;
+Version: 1.1.2
+License: GPLv3
+License URI: http://www.gnu.org/&hellip;
+Tags: two-columns, &hellip;
+Text Domain: melany
+*/
+      </pre>
+    </div>
+
+    <div class="step" data-rel-x="1500" data-rel-y="-300" data-rotate="-30">
+      <img src="img/template-hierarchy.png" alt="WordPress Template Hierarchy" class="fullscreen">
+    </div>
+
+    <div class="step slide source" data-rel-x="1100" data-rel-y="-1100" data-rotate="720" data-zoom="3">
+      <h2>Child Theme</h2>
+      <pre>
+/*
+Theme Name: Melany Child Theme
+Theme URI: https://example.com/melany-child
+Description: Melany is a simple, &hellip;
+Author: Mattia Migliorini
+Author URI: http://deshack.net
+<strong>Template: melany</strong>
+Version: 1.1.2
+License: GPLv3
+License URI: http://www.gnu.org/&hellip;
+Tags: two-columns, &hellip;
+Text Domain: melany-child
+*/
+      </pre>
+    </div>
+
+    <div id="overview" class="step" data-x="5000" data-y="3500" data-scale="12">
+    </div>
+</div>
+
+
+<!--
+    To make all described above really work, you need to include impress.js in the page.
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document.
+-->
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    Show a help popup for 5 seconds in the beginning, and if 'h' is pressed.
+
+    This nice help popup is originally from hovercraft.js project, and while I didn't want to
+    use the rst markup from hovercraft, I've retained this popup, as it looks really nice.
+-->
+<div id="impress-help">
+  <table>
+    <tr><th>H</th><td>Toggle this help</td></tr>
+    <tr><th>Space</th><td>Forward</td></tr>
+    <tr><th>Right, Down, Page Down</th><td>Next slide</td></tr>
+    <tr><th>Left, Up, Page Up</th><td>Previous slide</td></tr>
+    <!-- Only shown if impressConsole.js is present, hence it needs a dedicated #id -->
+    <tr id="impress-help-p"><th>P</th><td>Open presenter console</td></tr>
+  </table>
+</div>
+
+<script type="text/javascript" src="js/impress-help-popup.js"></script>
+
+</body>
+</html>
